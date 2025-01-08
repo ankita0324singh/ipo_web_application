@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="stylesheet" href="{% static 'css/main.css'%}">   
+</head>
+<body>
+    <h1>IPO Info</h1>
+    {% for ipo in ipo_info %}
+        <div class="ipo_card">
+            <div class="ipo_header">
+                <img src="{% static 'img/fallback.png'%}" alt="Company Logo" class="ipo_logo">
+                <h2 class="ipo_name">{{ ipo.company_name }}</h2>
+            </div>
+            <div class="ipo_details">
+                <div class="ipo_detail">
+                    <p>Price Band</p>
+                    <p><strong>{{ ipo.price_band }}</strong></p>
+                </div>
+                <div class="ipo_detail">
+                    <p>Open</p>
+                    <p><strong>{{ ipo.open_date }}</strong></p>
+                </div>
+                <div class="ipo_detail">
+                    <p>Close</p>
+                    <p><strong>{{ ipo.close_date }}</strong></p>
+                </div>
+                <div class="ipo_detail">
+                    <p>Issue Size</p>
+                    <p><strong>{{ ipo.issue_size }}</strong></p>
+                </div>
+                <div class="ipo_detail">
+                    <p>Issue Type</p>
+                    <p><strong>{{ ipo.issue_type }}</strong></p>
+                </div>
+                <div class="ipo_detail">
+                    <p>Listing Date</p>
+                    <p><strong>{{ ipo.listing_date }}</strong></p>
+                </div>                
+            </div>
+            <div class="ipo_buttons">
+                <button class="btn_rhp" onclick="showPDF('{{ipo.rhp}}')">RHP</button>
+                <button class="btn_drhp" onclick="showPDF('{{ipo.drhp}}')">DRHP</button>
+            </div>
+        </div>
+    {% endfor %}
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
