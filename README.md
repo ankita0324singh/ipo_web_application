@@ -23,4 +23,4 @@ The **IPO Web Application** provides comprehensive IPO-related information to th
 
 This information will be accessible through:  
 1. The Bluestock website and app.  
-2. Client websites and apps.  
+2. Client websites and apps.
