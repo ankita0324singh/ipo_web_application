@@ -26,17 +26,22 @@ h1 {
     box-sizing: border-box;
 }
 
-.ipo_card img {
-    display: block;
-    margin: 0 auto 10px;
-    max-height: 50px;
+.ipo_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-.ipo_card h2 {
-    text-align: center;
+.ipo_header img {
+    max-height: 75px;
+    margin-left: 75px;
+}
+
+.ipo_header h2 {
     color: #4a63f0;
-    font-size: 1.4rem;
-    margin-bottom: 20px;
+    font-size: 1.5rem;
+    margin-right: 75px;
 }
 
 .ipo_details {
